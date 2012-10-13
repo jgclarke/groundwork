@@ -1,0 +1,117 @@
+/** 
+ * Admin styles
+ * Some elements from GrowthSpark's gs-starter-theme
+ * https://github.com/growth-spark/gs-starter-theme
+ */
+
+/* Site styles, including variables */
+@import url('../../style.less');
+
+/*****
+Log in/Create account screens
+*****/
+
+body {
+	font-family: @base-font-family;
+	font-size: @base-size;
+}
+
+#login {
+	padding: 8em 0 0 0;
+}
+	
+.login h1 a {
+	margin: 0 auto;
+	padding-bottom: 1em;
+}
+
+#login_error, .login .message {
+    margin: 0 0 1em 0;
+}
+
+#login form {
+    margin: 0;
+
+	label {
+		font-size: @base-size * 1.1;
+		color: @theme-color-primary;
+	}
+
+}
+
+.login form {
+
+	.forgetmenot label {
+		font-size: @base-size * 0.8 !important;
+		color: #999 !important;
+	    line-height: 1.5em;
+	}
+	
+	input#rememberme {
+		position: relative;
+		top: 1px;
+	}
+}
+
+input.button-primary,
+button.button-primary,
+a.button-primary {
+    border-color: @theme-color-primary;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: none;
+    background: @theme-color-primary;
+    background-image: none;
+}
+
+input.button-primary:hover,
+button.button-primary:hover,
+a.button-primary:hover,
+a.button-primary:focus,
+a.button-primary:active,
+button.button-primary:active,
+a.button-primary:active {
+    background: lighten(@theme-color-primary, 10%);
+    color: #fff;
+}
+      
+.login #nav {
+	margin: 0;
+	color: #fff;
+ 
+	a:first-child {
+	    display: block;
+	    width: 60%;
+	    margin: 0 auto;
+	    font-size: @base-size * 0.8;
+	    font-weight: bold;
+	    text-align: center;
+	    text-shadow: none;
+	}
+	
+	a:nth-child(2) {
+	    display: inline-block;
+	    width: 100%;
+	    background: #fff;
+	    text-align: center;
+	}
+
+}
+ 
+               
+.login #backtoblog {
+	margin: 0;
+    padding: 0.8em 0 0 0;
+    text-align: center;
+}
+
+.login #nav a, .login #backtoblog a {
+	color: @theme-color-primary !important;
+}
+
+.login #nav a:hover, .login #backtoblog a:hover {
+	color: @theme-color-secondary !important;
+}
+
+
+

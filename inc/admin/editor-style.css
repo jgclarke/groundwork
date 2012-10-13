@@ -1,0 +1,19 @@
+/*
+Used to style the TinyMCE editor.
+*/
+
+* {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 1.25em;
+	color: #333;
+	font-weight: normal;
+	line-height: 1.35em;
+}
+
+blockquote {
+	font-family: Georgia, 'Times New Roman', Times, serif !important;
+	font-size: 1em;
+	font-style: italic;
+}
+
+
