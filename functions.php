@@ -71,6 +71,11 @@ function groundwork_setup() {
 	require( get_template_directory() . '/inc/admin/remove-default-widgets.php' );
 	require( get_template_directory() . '/inc/admin/remove-dashboard-widgets.php' );
 	//require( get_template_directory() . '/inc/admin/cpt.sample.php' );
+	
+	/**
+	 * Style the posts, pages, etc. editing windows to match your site design
+	 */	
+	add_editor_style( 'inc/admin/editor-style.css' );
 
 }
 add_action( 'after_setup_theme', 'groundwork_setup' );
@@ -109,7 +114,7 @@ function groundwork_scripts() {
 	
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/libs/modernizr-2.5.3.min.js', array(), '1', false );
 	
-	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/libs/jQuery.1.8.1.min.js', array(), '1.81', true );
+	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/libs/jquery-1.8.1.min.js', array(), '1.81', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply', array(), '', true );
