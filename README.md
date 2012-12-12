@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Groundwork is an opinionated starting point for a custom WordPress theme, including some basic responsive elements and some great ideas for customizing the admin area. Groundwork is released under the GNU license. It's free to use and modify.
+Groundwork is an opinionated starter theme for WordPress-based sites. It includes some some great ideas for customizing the admin area, basic responsive elements, and other tweaks to help you make a customized, personal, and more complete final site. Groundwork is released under the GNU license. It's free to use and modify.
 
 Groundwork includes:
 
@@ -69,16 +69,17 @@ In "inc/admin/remove-default-widgets.php, comment out and or un-comment-out to h
 
 * Don't forget to add in your own unique meta "content" info! (header.php)
 * Don't forget to add in your own Google Analytics code - or remove the snippet! (footer.php)
+* Don't forget to customize the theme and the remainder of your site to match the unique needs of your project as much as possible. 
 
 ## Additional Tips
 
 In addition to Groundwork, the following plugins are recommended to further customize your WordPress-based project:
 
-* Admin Menu Editor: Use this plugin to hide un-used menu items ("Tools", "Links", etc.) as well as re-arrange existing menu items to a more customized order (such as moving "Pages" above "Posts"; or re-naming "Posts" to "News").
+* Admin Menu Editor: Use this plugin to re-arrange and optimize the admin menu that better fits the specific needs of your project.
 
 * Debug Bar & Debug Bar Console: Use this plugin during theme/project development to debug quicker and easier.
 
-* Custom Post Type Editor: Use this plugin to quickly and easily manage form fields on custom posts.
+* Advanced Custom Fields: Use this plugin to quickly and easily create and manage form fields on custom post types.
 
 * Imsanity: Imsanity will automatically re-size upload images to a more reasonable (but still large enough) size.
 
