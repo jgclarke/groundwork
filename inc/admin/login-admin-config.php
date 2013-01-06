@@ -34,10 +34,10 @@
 			
 			/* For the log in, password, and create account screens */
 			.login h1 a {
-				width: <?php echo $theme_logo_width; ?>;
-				height: <?php echo $theme_logo_height; ?>;
+				width: <?php echo $theme_logo_width; ?>px;
+				height: <?php echo $theme_logo_height; ?>px;
 				background-image: url('<?php echo get_template_directory_uri().'/'. $theme_logo_path; ?>');
-				background-size: <?php echo $theme_logo_width; ?> <?php echo $theme_logo_height; ?>;
+				background-size: <?php echo $theme_logo_width; ?>px <?php echo $theme_logo_height; ?>px;
 			}
 			
 			/* For the admin area */
