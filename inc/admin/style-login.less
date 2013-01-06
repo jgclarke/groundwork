@@ -16,6 +16,10 @@ body {
 	font-size: @base-size;
 }
 
+body.login {
+	background: @theme-color-secondary;
+}
+
 #login {
 	padding: 8em 0 0 0;
 }
@@ -55,13 +59,16 @@ body {
 
 input.button-primary,
 button.button-primary,
-a.button-primary {
+a.button-primary,
+.wp-core-ui .button-primary {
     border-color: @theme-color-primary;
     font-weight: bold;
     color: #fff;
     text-shadow: none;
     background: @theme-color-primary;
     background-image: none;
+    -webkit-box-shadow: inset 0 1px 0 lighten(@theme-color-primary,20%);
+	box-shadow: inset 0 1px 0 lighten(@theme-color-primary,20%);
 }
 
 input.button-primary:hover,
@@ -70,9 +77,15 @@ a.button-primary:hover,
 a.button-primary:focus,
 a.button-primary:active,
 button.button-primary:active,
-a.button-primary:active {
+a.button-primary:active,
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:active,
+.wp-core-ui .button-primary:focus {
     background: lighten(@theme-color-primary, 10%);
     color: #fff;
+    -webkit-box-shadow: inset 0 1px 0 lighten(@theme-color-primary,20%);
+	box-shadow: inset 0 1px 0 lighten(@theme-color-primary,20%);
+	border-color: lighten(@theme-color-primary,20%);
 }
       
 .login #nav {
@@ -112,6 +125,3 @@ a.button-primary:active {
 .login #nav a:hover, .login #backtoblog a:hover {
 	color: @theme-color-secondary !important;
 }
-
-
-
