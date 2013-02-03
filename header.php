@@ -15,30 +15,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 	<head>
 	
-		<meta charset="<?php bloginfo( 'charset' ); ?>" />
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0; " name="viewport">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><?php
-			/*
-			 * Print the <title> tag based on what is being viewed.
-			 */
-			global $page, $paged;
-		
-			wp_title( '|', true, 'right' );
-		
-			// Add the blog name.
-			bloginfo( 'name' );
-		
-			// Add the blog description for the home/front page.
-			$site_description = get_bloginfo( 'description', 'display' );
-			if ( $site_description && ( is_home() || is_front_page() ) )
-				echo " | $site_description";
-		
-			// Add a page number if necessary:
-			if ( $paged >= 2 || $page >= 2 )
-				echo ' | ' . sprintf( __( 'Page %s', 'groundwork' ), max( $paged, $page ) );
-		
-			?></title>
+		<title><?php wp_title( '&bull;', true, 'right' ); ?></title>
 		
 		<meta name="description" content="">
 		

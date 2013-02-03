@@ -71,11 +71,6 @@ function groundwork_setup() {
 	require( get_template_directory() . '/inc/admin/remove-default-widgets.php' );
 	require( get_template_directory() . '/inc/admin/remove-dashboard-widgets.php' );
 	//require( get_template_directory() . '/inc/admin/cpt.sample.php' );
-	
-	/**
-	 * Style the posts, pages, etc. editing windows to match your site design
-	 */	
-	add_editor_style( 'inc/admin/editor-style.css' );
 
 }
 add_action( 'after_setup_theme', 'groundwork_setup' );

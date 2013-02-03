@@ -8,12 +8,20 @@
 Variables
 *****/
 
-@base-size: 1em;
-@base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-@base-color: #333;
-@base-bg-color: #fff;
-@theme-color-primary: #001949;
-@theme-color-secondary: #2954a8;
+@base-size: 1%;
+
+@base-font-size: 1em;
+@font-sansserif-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@base-font-family: @font-sansserif-stack;
+
+@defaultOpacity: 1;
+
+@base-bg-color: rgba(255,255,255,@defaultOpacity); /* White - #fff */
+@base-color: rgba(68,68,68,@defaultOpacity); /* Black - #444 */
+
+@theme-color-primary: rgba(0,25,73,@defaultOpacity); /* Dark Blue - #001949 */
+@theme-color-secondary: rgba(41,84,168,@defaultOpacity); /* Medium Blue - #2954a8 */
+@theme-color-light: rgba(238,238,238,@defaultOpacity); /* Light Gray - #eee */
 
 @logo-width: 274px;
 @logo-height: 63px;
@@ -28,7 +36,7 @@ Base styles
 html, button, input, select, textarea {
 	font-family: @base-font-family;
 	color: @base-color;
-	font-size: @base-size;
+	font-size: @base-font-size;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -42,7 +50,7 @@ body {
 }
 
 #page {
-	width: 90%;
+	width: @base-size * 90;
 	max-width: @max-width;
 	min-width: @min-width;
 	margin: 0 auto;
@@ -54,7 +62,7 @@ a:visited { color: @theme-color-primary; }
 a:hover { color: @theme-color-secondary; }
 
 ::-moz-selection { background: @theme-color-secondary; color: #fff; text-shadow: none; }
-::selection { background: @theme-color-secondary; color: #fff; text-shadow: none; }
+::selection { background: @theme-color-secondary; color: @base-bg-color; text-shadow: none; }
 
 /*****
 Header
@@ -80,71 +88,71 @@ nav.main-navigation {
 	background: @base-color;
 
 	ul {
-		margin: 0 0 0 -0.8125em;
+		margin: 0 0 0 @base-font-size * -0.8125;
 		padding-left: 0;
-		font-size: @base-size;
+		font-size: @base-font-size;
 		list-style: none;
 	}
-	
+
 	li {
 		position: relative;
 		float: left;
 	}
-	
+
 	a {
 		display: block;
-		padding: 0 1.2125em;
-		color: #eee;
-		line-height: 3.333em;
+		padding: 0 @base-font-size * 1.2125;
+		color: lighten(@base-color, 70%);
+		line-height: @base-font-size * 3.333;
 		text-decoration: none;
 	}
-	
+
 	ul ul {
 		display: none;
 		float: left;
 		position: absolute;
-		top: 3.333em;
+		top: @base-font-size * 3.333;
 		left: 0;
 		z-index: 99999;
 		width: 188px;
 		margin: 0;
-		font-size: @base-size;
+		font-size: @base-font-size;
 		text-align: left;
 	}
-	
+
 	ul ul ul {
 		left: 100%;
 		top: 0;
 	}
-	
+
 	ul ul a {
 		width: 168px;
 		height: auto;
-		padding: 10px 10px;
+		padding: @base-size * 4;
 		border-bottom: 1px dotted @base-color;
 		background: lighten(@base-color, 80%);
 		color: @base-color;
-		font-size: @base-size;
+		font-size: @base-font-size;
 		font-weight: normal;
-		line-height: 1.4em;
+		line-height: @base-font-size * 1.4;
 	}
-	
+
 	li:hover > a,
 	ul ul :hover > a,
 	a:focus {
 		background: lighten(@base-color, 60%);
 	}
-	
+
 	li:hover > a,
 	a:focus {
 		background: lighten(@base-color, 80%);
 		color: @base-color;
 	}
-	
+
 	ul li:hover > ul {
 		display: block;
 	}
-	
+
 	.current-menu-item > a,
 	.current-menu-ancestor > a,
 	.current_page_item > a,
@@ -170,11 +178,11 @@ Primary/Main content
 #primary {
 	width: 100%;
 	float: left;
-	margin: 0 -24% 0 0;
+	margin: 0 @base-size * -24% 0 0;
 }
 
 #content {
-	margin: 0 24% 0 0;
+	margin: 0 @base-size * 24 0 0;
 	background: lighten(@base-color, 70%);
 }
 
@@ -184,7 +192,7 @@ Sidebars
 
 #secondary {
 	float: right;
-	width: 20%;
+	width: @base-size * 20;
 }
 
 /*****
@@ -193,7 +201,7 @@ Footer
 
 footer#site-footer {
 	clear: both;
-	padding: @base-size 0;
+	padding: @base-font-size 0;
 	text-align: center;
 }
 
@@ -223,7 +231,7 @@ header.entry-header {
 /* Page/post navigation */
 
 #content .site-navigation {
-	margin: 0 0 1.5em;
+	margin: 0 0 @base-size * 1.5;
 	overflow: hidden;
 }
 
@@ -241,13 +249,13 @@ header.entry-header {
 /* Caption styles */
 
 .wp-caption {
-	border: 1px solid #ccc;
+	border: 1px solid @theme-color-primary;
 	max-width: 100%;
 	
 	img {
 		display: block;
-		margin: 1.2% auto 0;
-		max-width: 98%;
+		margin: @base-size * 1.2 auto 0;
+		max-width: @base-size * 98;
 	}
 
 }
@@ -255,7 +263,7 @@ header.entry-header {
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
-	margin-bottom: 1.5em;
+	margin-bottom: @base-size * 1.5;
 }
 
 .wp-caption-text {
@@ -263,13 +271,13 @@ header.entry-header {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: @base-size * 0.8075 0;
 }
 
 /* Gallery styles */
 
 #content .gallery {
-	margin-bottom: 1.5em;
+	margin-bottom: @base-size * 1.5;
 }
 
 .gallery-caption {
@@ -278,7 +286,7 @@ header.entry-header {
 #content .gallery a img {
 	border: none;
 	height: auto;
-	max-width: 90%;
+	max-width: @base-size * 90;
 }
 
 #content .gallery dd {
@@ -339,7 +347,7 @@ Mobile-specific styles
 @media only screen and (max-width: 480px) {
 
 	body {
-		font-size: @base-size * 1.4;
+		font-size: @base-font-size * 1.4;
 	}
 	
 	header#site-header .small-menu-pointer {
@@ -380,7 +388,7 @@ Mobile-specific styles
 			top: 0;
 			left: 0;
 			width: auto;
-			font-size: @base-size * 0.8;
+			font-size: @base-font-size * 0.8;
 			text-align: center;
 		}
 		
@@ -413,9 +421,6 @@ Print styles
 @media print {
   * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
   a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
   thead { display: table-header-group; } 
   tr, img { page-break-inside: avoid; }
