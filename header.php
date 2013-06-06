@@ -18,10 +18,8 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0; " name="viewport">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><?php wp_title( '&bull;', true, 'right' ); ?></title>
-		
-		<meta name="description" content="">
-		
+		<title><?php wp_title( '&bull;', true, 'right' ); ?><?php bloginfo('name'); ?></title>
+
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		
