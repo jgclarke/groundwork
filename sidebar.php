@@ -13,21 +13,15 @@
 	
 	<?php if ( is_page_template('home-page.php') ) { ?>
 	
-		<aside id="first" class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-home' ); ?>
-		</aside>
+		<?php dynamic_sidebar( 'sidebar-home' ); ?>
 		
 	<?php } else if ( is_home() || is_archive() || is_category() || is_single() ) { ?>
 	
-		<aside id="first" class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-news' ); ?>
-		</aside>
+		<?php dynamic_sidebar( 'sidebar-news' ); ?>
 	
 	<?php } else { ?>
 		
-		<aside id="first" class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-standard' ); ?>
-		</aside>
+		<?php dynamic_sidebar( 'sidebar-standard' ); ?>
 		
 	<?php } ?>
 	
