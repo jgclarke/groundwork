@@ -1,6 +1,5 @@
 <?php
 /**
- * Template Name: Homepage
  * The template for displaying the homepage.
  *
  * @package Groundwork
