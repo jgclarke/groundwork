@@ -18,11 +18,11 @@
 			echo '<link rel="stylesheet/less" type="text/css" href="' . get_template_directory_uri() . '/inc/admin/style-login.less" media="all" />';
 		}
 			
-		if ('WP_DEV_MODE' == true ) {
+		if ('SITE_MODE' == 'dev' ) {
 			echo '<script type="text/javascript">less = { env: \'development\' };</script>';
 		}
 			
-		echo '<script src="'. get_template_directory_uri() .'/js/libs/less-1.3.0.min.js" type="text/javascript"></script>';
+		echo '<script src="'. get_template_directory_uri() .'/js/libs/less-1.7.0.min.js" type="text/javascript"></script>';
 		
 		$theme_logo_width = themeLogo::THEME_LOGO_WIDTH;
 		$theme_logo_height = themeLogo::THEME_LOGO_HEIGHT;
@@ -38,24 +38,6 @@
 				height: <?php echo $theme_logo_height; ?>px;
 				background-image: url('<?php echo get_template_directory_uri().'/'. $theme_logo_path; ?>');
 				background-size: <?php echo $theme_logo_width; ?>px <?php echo $theme_logo_height; ?>px;
-			}
-			
-			/* For the admin area */
-			.index-php .wrap h2:nth-child(2) {
-    			visibility: hidden;
-    			line-height: 1px;
-			}
-			
-			.index-php #icon-index {
-				background-image: url('<?php echo get_template_directory_uri().'/'. $theme_logo_path; ?>');
-			}
-			
-			.index-php #icon-index {
-    			float: none !important;
-			    width: <?php echo $theme_logo_width; ?>px !important;
-			    height: <?php echo $theme_logo_height; ?>px !important;
-			    margin-top: 15px !important;
-			    background-position: 0px 0px !important;   
 			}
 
 			#customize-current-theme-link {
