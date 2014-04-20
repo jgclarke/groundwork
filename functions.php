@@ -107,8 +107,10 @@ function groundwork_scripts() {
 
 	wp_enqueue_style( 'default-stylesheet', get_template_directory_uri() . '/style.css', array(), '1', 'all', false );
 	
+	wp_enqueue_script('jquery');
+	
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/libs/modernizr-2.5.3.min.js', array(), '1', false );
-
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply', array(), '', true );
 	}
