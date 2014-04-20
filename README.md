@@ -1,5 +1,9 @@
 # Groundwork - A WordPress starter theme for caring developers
 
+## Update
+
+As of 4/20/2014, Groundwork is no longer maintained or supported. Please check out my new starter theme, Baseline: https://github.com/jgclarke/baseline
+
 ## Introduction
 
 Groundwork is an opinionated starter theme for WordPress-based sites. It includes some some great ideas for customizing the admin area, basic responsive elements, and other tweaks to help you make a customized, personal, and more complete final site. Groundwork is released under the GNU license. It's free to use and modify.
