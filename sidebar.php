@@ -11,7 +11,7 @@
 
 	<?php do_action( 'before_sidebar' ); ?>
 	
-	<?php if ( is_page_template('home-page.php') ) { ?>
+	<?php if ( is_page_template('front-page.php') ) { ?>
 	
 		<?php dynamic_sidebar( 'sidebar-home' ); ?>
 		
